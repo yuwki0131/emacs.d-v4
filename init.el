@@ -11,6 +11,7 @@
 (require 'font)
 (require 'color)
 (require 'appearance)
+(require 'hooks)
 (require 'key)
 
 '(setq default-directory "~/")
