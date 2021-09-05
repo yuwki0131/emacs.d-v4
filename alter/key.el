@@ -23,8 +23,9 @@
 (global-set-key "\C-e\C-f" 'next-buffer)
 (global-set-key "\C-e\C-b" 'previous-buffer)
 (global-set-key "\C-e\C-a" 'move-beginning-of-line)
-
 (global-set-key "\C-e\C-e" 'move-end-of-line)
+
+(global-set-key "\C-a\C-a" 'comment-dwim)
 (global-set-key "\C-a\C-r" 'rectangle-mark-mode)
 (global-set-key "\C-a\C-k" 'kill-this-buffer)
 (global-set-key "\C-a\C-y" 'counsel-yank-pop)
