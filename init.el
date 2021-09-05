@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; WIP: 設定ファイルのルート
-(add-to-list 'load-path "~/Dropbox/repo3/emacs.d-v4/alter")
+(add-to-list 'load-path "~/.emacs.d/alter")
 
 (require 'builtin)
 (require 'font)
@@ -12,6 +12,8 @@
 (require 'appearance)
 (require 'key)
 (require 'min-packages)
+
+(setq default-directory "~/")
 
 ;;; position
 
