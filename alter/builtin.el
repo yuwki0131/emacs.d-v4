@@ -77,6 +77,9 @@
 ;; CHECKME: ‘isearch-word’ is an obsolete variable (as of 25.1)対策
 (defvar search-default-regexp-mode nil)
 
+;; Rubyでフリーズする問題の対策
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;;; ---------------------------------------------------------------------------
 ;;; provide
 ;;; ---------------------------------------------------------------------------

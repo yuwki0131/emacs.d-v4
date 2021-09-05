@@ -6,18 +6,22 @@
 (global-unset-key "\C-e")
 (global-unset-key "\C-a")
 (global-unset-key "\C-z")
-
+(global-unset-key "\M-m")
 
 ;;; minimum key bindings
-(bind-key "C-q" 'undo)
-(bind-key "C-h" 'delete-backward-char)
-(bind-key "M-h" 'backward-kill-word)
+(global-set-key "\C-q" 'undo)
+(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key "\M-h" 'backward-kill-word)
 
-(bind-key "C-z C-r" 'replace-string)
-(bind-key "C-e C-c" 'shell)
+(global-set-key "\C-z \C-r" 'replace-string)
 
-(bind-key "C-a C-r" 'rectangle-mark-mode)
-(bind-key "C-a C-k" 'kill-this-buffer)
+(global-set-key "\C-e \C-c" 'shell)
+(global-set-key "\C-e \C-m" 'counsel-switch-buffer)
+(global-set-key "\C-e \C-f" 'next-buffer)
+(global-set-key "\C-e \C-b" 'previous-buffer)
+
+(global-set-key "\C-a \C-r" 'rectangle-mark-mode)
+(global-set-key "\C-a \C-k" 'kill-this-buffer)
 
 ;;; ---------------------------------------------------------------------------
 ;;; provide
