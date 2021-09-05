@@ -1,4 +1,4 @@
-;;; min-packages.el --- packages
+;;; principals.el --- packages
 ;;; Commentary:
 ;;;  フォント設定
 ;;; Code:
@@ -79,23 +79,27 @@
     (doom-modeline-set-modeline 'my-simple-line 'default))
   (add-hook 'doom-modeline-mode-hook 'setup-custom-doom-modeline))
 
+;;; ---------------------------------------------------------------------------
+;;; magit
+;;; ---------------------------------------------------------------------------
+(use-package magit)
+
+;;; ---------------------------------------------------------------------------
+;;; grep packages
+;;; ---------------------------------------------------------------------------
+(use-package wgrep
+  :config
+  ;; "e"でwgrepモード有効
+  (setf wgrep-enable-key "e")
+  ;; wgrep終了時にバッファを保存
+  (setq wgrep-auto-save-buffer t))
+
 ;; candidates
 ;; - undotree
-;; - wgrep
 ;; - codic
-;; - swiper
-;; - (connsel)
-;; - (company)
-;; - doom
-;; -
-;; -
-;; - magit
-;; -
-;; -
-;; -
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
-(provide 'min-packages)
-;;; min-packages.el ends here
+(provide 'principals)
+;;; principals.el ends here
