@@ -74,6 +74,10 @@
 ;; disable
 (recentf-mode nil)
 
+;;; ---------------------------------------------------------------------------
+;;; エラー、不具合対策
+;;; ---------------------------------------------------------------------------
+
 ;; CHECKME: ‘isearch-word’ is an obsolete variable (as of 25.1)対策
 (defvar search-default-regexp-mode nil)
 
