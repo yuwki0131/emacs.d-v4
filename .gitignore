@@ -1,3 +1,6 @@
+# elpa
+elpa
+
 # Compiled
 *.elc
 
@@ -9,3 +12,8 @@
 
 # Undo-tree save-files
 *.~undo-tree
+
+# others
+network-security.data
+recentf
+transient
