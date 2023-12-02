@@ -30,6 +30,11 @@
 (global-set-key "\C-a\C-k" 'kill-this-buffer)
 (global-set-key "\C-a\C-y" 'counsel-yank-pop)
 
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+
 ;;; ---------------------------------------------------------------------------
 ;;; provide
 ;;; ---------------------------------------------------------------------------
