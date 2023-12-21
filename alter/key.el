@@ -9,10 +9,11 @@
 (global-unset-key "\M-m")
 
 (global-set-key "\C-x\C-f" 'counsel-find-file)
-(global-set-key "\C-s"      'swiper)
+(global-set-key "\C-s"     'swiper)
 
 ;;; minimum key bindings
 (global-set-key "\C-q" 'undo)
+(global-set-key "\M-q" 'undo-redo)
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-h" 'backward-kill-word)
 
