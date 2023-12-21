@@ -11,6 +11,7 @@
 (defvar color/main               "#0997B6") ;; darkcyan
 (defvar color/secondary          "#FF4C00") ;; orange
 (defvar color/emphasis           "#E5266A") ;; deep pink
+(defvar color/emphasis/weak      "#FC9CBF") ;; weak deep pink
 (defvar color/string-like        "#3CB371") ;; green
 
 ;; normal (gray)
@@ -66,6 +67,9 @@
 (set-face-app1 'font-lock-warning-face           color/emphasis    nil t)
 (set-face-app1 'font-lock-preprocessor-face      color/main        nil nil)
 (set-face-app1 'font-lock-negation-char-face     color/main        nil nil)
+
+;;; region
+(set-face-attribute 'region nil :background color/emphasis/weak)
 
 ;;; ---------------------------------------------------------------------------
 ;;; カーソル
