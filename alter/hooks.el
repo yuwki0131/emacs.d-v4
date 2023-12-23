@@ -3,11 +3,12 @@
 ;;;  Hook設定
 ;;; Code:
 
-(defun trailing-whitespace-before-save ()
-  (when (derived-mode-p 'prog-mode)
-    (delete-trailing-whitespace)))
 
-(add-hook 'before-save-hook 'trailing-whitespace-before-save)
+;; trim trailing whitespaces while saveing
+(add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
+
+;; シェルモードで補完
+(add-hook 'shell-mode-hook 'company-mode)
 
 ;;; ---------------------------------------------------------------------------
 ;;; provide

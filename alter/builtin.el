@@ -77,9 +77,6 @@
 ;; disable
 (recentf-mode nil)
 
-;; trim trailing whitespaces while saveing
-(add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
-
 ;;; ---------------------------------------------------------------------------
 ;;; エラー、不具合対策
 ;;; ---------------------------------------------------------------------------
