@@ -57,7 +57,7 @@
 
  ;; Make Tab complete if the line is indented
  tab-always-indent 'complete
-
+ 
  ;; tab挿入モードを無効化(タブの代わりにスペースを使用)
  indent-tabs-mode nil
 

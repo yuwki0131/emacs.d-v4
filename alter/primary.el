@@ -1,6 +1,6 @@
-;;; principals.el --- packages
+;;; primary.el --- packages
 ;;; Commentary:
-;;;  フォント設定
+;;;  package(優先)
 ;;; Code:
 
 (require 'package)
@@ -101,5 +101,5 @@
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
-(provide 'principals)
-;;; principals.el ends here
+(provide 'primary)
+;;; primary.el ends here

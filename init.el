@@ -6,7 +6,7 @@
 ;; WIP: 設定ファイルのルート
 (add-to-list 'load-path "~/.emacs.d/alter")
 
-(require 'principals)
+(require 'primary)
 (require 'builtin)
 (require 'font)
 (require 'color)

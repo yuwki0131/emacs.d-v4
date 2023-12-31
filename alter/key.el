@@ -20,7 +20,6 @@
 (global-set-key "\C-z\C-r" 'replace-string)
 (global-set-key "\C-z\C-p" 'package-install)
 
-
 (global-set-key "\C-e\C-c" 'shell)
 (global-set-key "\C-e\C-m" 'counsel-switch-buffer)
 (global-set-key "\C-e\C-f" 'next-buffer)
