@@ -31,6 +31,7 @@
 (global-set-key "\C-a\C-r" 'rectangle-mark-mode)
 (global-set-key "\C-a\C-k" 'kill-this-buffer)
 (global-set-key "\C-a\C-y" 'counsel-yank-pop)
+(global-set-key "\C-a\C-q" 'quoted-insert)
 
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
