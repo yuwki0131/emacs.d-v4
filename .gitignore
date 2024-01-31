@@ -2,6 +2,10 @@
 elpa
 eln-cache
 
+# Straight
+straight
+history
+
 # Compiled
 *.elc
 
