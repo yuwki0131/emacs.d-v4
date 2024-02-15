@@ -79,6 +79,19 @@
 
 ;; (set-face-attribute 'hl-line nil :inherit nil :background color/fade)
 
+
+;;; ---------------------------------------------------------------------------
+;;; modeline
+;;; ---------------------------------------------------------------------------
+
+(custom-set-faces
+ '(mode-line
+   ((t (:background "#f0f0f0" :foreground nil
+	:box nil))))
+ '(mode-line-inactive
+   ((t (:background "#ffffff" :foreground nil
+	:box (:line-width 1 :color "#f0f0f0" :style nil))))))
+
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
