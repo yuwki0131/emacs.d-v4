@@ -99,6 +99,35 @@
    ((t (:box (:line-width (4 . 4) :color "#333333")
 	     :foreground "#f0f0f0" :background "#333333")))))
 
+;;; ---------------------------------------------------------------------------
+;;; counsel/ivy
+;;; ---------------------------------------------------------------------------
+(custom-set-faces
+ `(ivy-current-match
+   ((t (:background ,color/emphasis/weak :foreground ,color/main :underline nil))))
+ `(ivy-minibuffer-match-face-1 ((t (:foreground ,color/secondary))))
+ `(ivy-minibuffer-match-face-2 ((t (:foreground ,color/emphasis))))
+ `(ivy-minibuffer-match-face-3 ((t (:foreground ,color/main))))
+ `(ivy-minibuffer-match-face-4 ((t (:foreground ,color/string-like))))
+ `(ivy-subdir ((t (:foreground ,color/main))))
+ ;; '(ivy-confirm-face ((t (:foreground "green"))))
+ ;; '(ivy-match-required-face ((t (:foreground "red"))))
+ ;; '(ivy-org ((t (:foreground "red"))))
+ '(ivy-highlight-face ((t (:foreground "magenta"))))
+ )
+
+;;; ---------------------------------------------------------------------------
+;;; company
+;;; ---------------------------------------------------------------------------
+(custom-set-faces
+ `(company-tooltip ((t (:foreground ,color/popup-inactive :background "#0f0f0f"))))
+ '(company-scrollbar-bg ((t (:background "#404040"))))
+ '(company-scrollbar-fg ((t (:background "#808080"))))
+ `(company-tooltip-selection ((t (:foreground ,color/secondary :background ,color/popup-inactive))))
+ `(company-tooltip-common ((t (:foreground ,color/emphasis))))
+ '(company-preview ((t (:background "#333333" :foreground "#c0c0c0"))))
+ '(company-preview-common ((t (:foreground "#b0b0b0")))))
+
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
