@@ -3,7 +3,6 @@
 ;;;  Hook設定
 ;;; Code:
 
-
 ;; trim trailing whitespaces while saveing
 (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 
