@@ -9,7 +9,7 @@
 (require 'primary)
 (require 'builtin)
 (require 'font)
-(require 'color)
+(require 'xolor)
 (require 'appearance)
 (require 'hooks)
 (require 'key)

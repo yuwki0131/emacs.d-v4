@@ -1,8 +1,9 @@
-;;; color.el --- packages
+;;; xolor.el --- packages
 ;;; Commentary:
 ;;;  色設定
 ;;;  色を調べるときは、M-x list-faces-display
 ;;; Code:
+(require 'color)
 
 ;;; ---------------------------------------------------------------------------
 ;;; 色設定
@@ -122,16 +123,30 @@
 ;;; company
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- `(company-tooltip ((t (:foreground ,color/popup-inactive :background "#0f0f0f"))))
- '(company-scrollbar-bg ((t (:background "#404040"))))
- '(company-scrollbar-fg ((t (:background "#808080"))))
- `(company-tooltip-selection ((t (:foreground ,color/secondary :background ,color/popup-inactive))))
- `(company-tooltip-common ((t (:foreground ,color/emphasis))))
- '(company-preview ((t (:background "#333333" :foreground "#c0c0c0"))))
- '(company-preview-common ((t (:foreground "#b0b0b0")))))
+ `(company-tooltip
+   ((t (:foreground ,color/popup-inactive :background "#0f0f0f"))))
+ '(company-scrollbar-bg
+   ((t (:background "#404040"))))
+ '(company-scrollbar-fg
+   ((t (:background "#808080"))))
+ `(company-tooltip-selection
+   ((t (:foreground ,color/secondary :background ,color/popup-inactive))))
+ `(company-tooltip-common
+   ((t (:foreground ,color/emphasis))))
+ '(company-preview
+   ((t (:background "#333333" :foreground "#c0c0c0"))))
+ '(company-preview-common
+   ((t (:foreground "#b0b0b0")))))
+
+;;; ---------------------------------------------------------------------------
+;;; swiper/ivy
+;;; ---------------------------------------------------------------------------
+(custom-set-faces
+ '(swiper-match-face-2
+   ((t (:background "#fc9cbf" :foreground "#111111" :weight bold)))))
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
-(provide 'color)
-;;; color.el ends here
+(provide 'xolor)
+;;; xolor.el ends here
