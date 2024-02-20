@@ -42,6 +42,8 @@
   (defvar counsel-find-file-ignore-regexp
     (regexp-opt '("./" "../")))
   (global-set-key (kbd "M-x") 'counsel-M-x)
+  ;; for all ivy
+  (setq ivy-height 30)
   (setq
    counsel-preselect-current-file t
    counsel-yank-pop-preselect-last t
