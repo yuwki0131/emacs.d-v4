@@ -10,6 +10,8 @@
 (global-unset-key "\M-m")
 (global-unset-key "\M-o")
 (global-unset-key "\C-r")
+(global-unset-key "\C-[")
+(global-unset-key "\C-]")
 
 ;;; alt default keybindings
 (global-set-key "\C-x\C-f" 'counsel-find-file)
@@ -17,7 +19,7 @@
 (global-set-key "\C-r"     'swiper-isearch-backward)
 
 ;;; Minimum key bindings
-; (global-set-key "\C-@" 'counsel-M-x)
+(global-set-key "\C-@" 'counsel-M-x)
 (global-set-key "\C-q" 'undo)
 (global-set-key "\M-q" 'undo-redo)
 (global-set-key "\C-h" 'delete-backward-char)
@@ -37,6 +39,8 @@
 (global-set-key "\C-e\C-m" 'counsel-switch-buffer)
 (global-set-key "\C-e\C-f" 'next-buffer)
 (global-set-key "\C-e\C-b" 'previous-buffer)
+(global-set-key "\C-]"     'next-buffer)
+(global-set-key "\C-["     'previous-buffer)
 (global-set-key "\C-e\C-a" 'move-beginning-of-line)
 (global-set-key "\C-e\C-e" 'move-end-of-line)
 
