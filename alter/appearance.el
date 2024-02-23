@@ -9,6 +9,9 @@
 ;; タイトルバー
 (setq frame-title-format "%b")
 
+;; カーソル行ハイライト
+(global-hl-line-mode t)
+
 ;; 余計なマージンを削除
 (set-fringe-mode 0)
 

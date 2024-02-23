@@ -71,6 +71,10 @@
 ;;; region
 (set-face-attribute 'region nil :background color/emphasis/weak)
 
+;;; current line
+(custom-set-faces
+ `(hl-line ((t (:background ,color/inverted-active)))))
+
 ;;; ---------------------------------------------------------------------------
 ;;; カーソル
 ;;; ---------------------------------------------------------------------------
