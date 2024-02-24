@@ -12,6 +12,7 @@
 (require 'xolor)
 (require 'appearance)
 (require 'hooks)
+(require 'lang)
 (require 'key)
 
 '(setq default-directory "~/")
