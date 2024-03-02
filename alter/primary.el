@@ -7,10 +7,8 @@
 (setq package-archives
       '(("gnu"          . "https://elpa.gnu.org/packages/")
         ("melpa"        . "https://melpa.org/packages/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")
-        ("marmalade"    . "http://marmalade-repo.org/packages/")
-        ("elpa-gnu"     . "http://elpa.gnu.org/packages/")
         ))
+
 (package-initialize)
 
 (defvar bootstrap-version)
@@ -57,6 +55,15 @@
          ("M-A" . marginalia-cycle))
   :init
   (marginalia-mode))
+
+;;; ---------------------------------------------------------------------------
+;;; orderless: multiple word search
+;;; ---------------------------------------------------------------------------
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; auto complete: company
