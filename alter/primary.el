@@ -50,6 +50,15 @@
    ))
 
 ;;; ---------------------------------------------------------------------------
+;;; marmalade: rich annotations using the Marginalia package
+;;; ---------------------------------------------------------------------------
+(use-package marginalia
+  :bind (:map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+  :init
+  (marginalia-mode))
+
+;;; ---------------------------------------------------------------------------
 ;;; auto complete: company
 ;;; ---------------------------------------------------------------------------
 (use-package company
