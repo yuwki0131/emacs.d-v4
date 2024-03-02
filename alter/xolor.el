@@ -8,33 +8,27 @@
 ;;; ---------------------------------------------------------------------------
 ;;; 色設定
 ;;; ---------------------------------------------------------------------------
-;; emphasis
-(defvar color/main               "#0997B6") ;; darkcyan
-(defvar color/secondary          "#FF4C00") ;; orange
-(defvar color/emphasis           "#E5266A") ;; deep pink
-(defvar color/emphasis/weak      "#FC9CBF") ;; weak deep pink
-(defvar color/string-like        "#3CB371") ;; green
+;; colored
+(defvar v/main          "#0997B6") ;; darkcyan
+(defvar v/secondary     "#FF4C00") ;; orange
+(defvar v/emphasis      "#E5266A") ;; deep pink
+(defvar v/emphasis/weak "#FC9CBF") ;; weak deep pink
+(defvar v/string-like   "#3CB371") ;; green
 
-;; normal (gray)
-(defvar color/active-strong      "#080808")
-(defvar color/active             "#101010") ;; for foreground color
-(defvar color/inactive           "#393939") ;; for foreground color, but not active
-(defvar color/invert             "#393939") ;; for inverted background color
-(defvar color/out-strong         "#666666") ;; kind of comment out, but strong
-(defvar color/out                "#777777") ;; kind of comment out (removed from context)
-(defvar color/fade-strong        "#A0A0A0")
-(defvar color/popup-active       "#D0D0D0")
-(defvar color/popup-inactive     "#E4E4E4")
-(defvar color/popup-hide         "#F0F0F0")
-(defvar color/inverted-active    "#F1F1F1") ;; for foreground color in inverted background color
-(defvar color/fade               "#F2F2F2")
-(defvar color/hide               "#FFFFFF") ;; for background color
+;; gray scale
+(defvar v/foreground     "#101010") ;; for foreground color
+(defvar v/background/inv "#333333") ;; for inverted background color
+(defvar v/out-strong     "#666666") ;; comment out, but strong
+(defvar v/out            "#777777") ;; comment out (removed from context)
+(defvar v/foreground/inv "#E0E0E0") ;; inverted foreground
+(defvar v/focus          "#F0F0F0") ;; for focus
+(defvar v/background     "#FFFFFF") ;; for background color
 
 ;;; ---------------------------------------------------------------------------
 ;;; 背景/前景の設定
 ;;; ---------------------------------------------------------------------------
-(set-foreground-color color/active)
-(set-background-color color/hide)
+(set-foreground-color v/foreground)
+(set-background-color v/background)
 
 ;;; ---------------------------------------------------------------------------
 ;;; 構文の設定
@@ -54,77 +48,86 @@
   (set-face-italic     attr-symbol italic))
 
 ;; coloring program
-(set-face-app1 'font-lock-comment-delimiter-face color/out-strong  t   t)
-(set-face-app1 'font-lock-comment-face           color/out         nil t)
-(set-face-app1 'font-lock-doc-face               color/emphasis    nil t)
-(set-face-app1 'font-lock-string-face            color/string-like t   nil)
-(set-face-app1 'font-lock-keyword-face           color/main        t   nil)
-(set-face-app1 'font-lock-builtin-face           color/main        nil nil)
-(set-face-app1 'font-lock-function-name-face     color/secondary   t   nil)
-(set-face-app1 'font-lock-variable-name-face     color/secondary   nil nil)
-(set-face-app1 'font-lock-type-face              color/main        t   nil)
-(set-face-app1 'font-lock-constant-face          color/emphasis    t   nil)
-(set-face-app1 'font-lock-warning-face           color/emphasis    nil t)
-(set-face-app1 'font-lock-preprocessor-face      color/main        nil nil)
-(set-face-app1 'font-lock-negation-char-face     color/main        nil nil)
+(set-face-app1 'font-lock-comment-delimiter-face v/out-strong  t   t)
+(set-face-app1 'font-lock-comment-face           v/out         nil t)
+(set-face-app1 'font-lock-doc-face               v/emphasis    nil t)
+(set-face-app1 'font-lock-string-face            v/string-like t   nil)
+(set-face-app1 'font-lock-keyword-face           v/main        t   nil)
+(set-face-app1 'font-lock-builtin-face           v/main        nil nil)
+(set-face-app1 'font-lock-function-name-face     v/secondary   t   nil)
+(set-face-app1 'font-lock-variable-name-face     v/secondary   nil nil)
+(set-face-app1 'font-lock-type-face              v/main        t   nil)
+(set-face-app1 'font-lock-constant-face          v/emphasis    t   nil)
+(set-face-app1 'font-lock-warning-face           v/emphasis    nil t)
+(set-face-app1 'font-lock-preprocessor-face      v/main        nil nil)
+(set-face-app1 'font-lock-negation-char-face     v/main        nil nil)
 
+;;; ---------------------------------------------------------------------------
 ;;; region
-(set-face-attribute 'region nil :background color/emphasis/weak)
+;;; ---------------------------------------------------------------------------
+(set-face-attribute
+ 'region nil :background v/emphasis/weak)
 
+;;; ---------------------------------------------------------------------------
 ;;; current line
+;;; ---------------------------------------------------------------------------
 (custom-set-faces
- `(hl-line ((t (:background ,color/inverted-active)))))
+ `(hl-line ((t (:background ,v/focus)))))
 
 ;;; ---------------------------------------------------------------------------
-;;; カーソル
+;;; cursor
 ;;; ---------------------------------------------------------------------------
-(set-cursor-color color/emphasis)
-;; (set-face-attribute 'hl-line nil :inherit nil :background color/fade)
+(set-cursor-color v/emphasis)
 
 ;;; ---------------------------------------------------------------------------
 ;;; modeline
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- '(mode-line
-   ((t (:background "#f0f0f0" :foreground nil
+ `(mode-line
+   ((t (:background ,v/focus :foreground nil
 	:box nil))))
- '(mode-line-inactive
-   ((t (:background "#ffffff" :foreground nil
-	:box (:line-width 1 :color "#f0f0f0" :style nil))))))
+ `(mode-line-inactive
+   ((t (:background ,v/background :foreground nil
+	:box (:line-width 1 :color ,v/focus :style nil))))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; headerline
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- '(header-line
-   ((t (:box (:line-width (4 . 4) :color "#333333")
-	     :foreground "#f0f0f0" :background "#333333")))))
+ `(header-line
+   ((t (:box
+	(:line-width (4 . 4) :color ,v/background/inv)
+	:foreground ,v/foreground/inv
+	:background ,v/background/inv)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; minibuffer
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- `(minibuffer-prompt ((t (:foreground ,color/main :weight bold)))))
+ `(minibuffer-prompt ((t (:foreground ,v/main :weight bold)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; git-gutter
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- `(git-gutter:added    ((t (:foreground ,color/main          :background ,color/main))))
- `(git-gutter:deleted  ((t (:foreground ,color/secondary     :background ,color/secondary))))
- `(git-gutter:modified ((t (:foreground ,color/emphasis/weak :background ,color/emphasis/weak)))))
+ `(git-gutter:added
+   ((t (:foreground ,v/main          :background ,v/main))))
+ `(git-gutter:deleted
+   ((t (:foreground ,v/secondary     :background ,v/secondary))))
+ `(git-gutter:modified
+   ((t (:foreground ,v/emphasis/weak :background ,v/emphasis/weak)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; counsel/ivy
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
  `(ivy-current-match
-   ((t (:background ,color/emphasis/weak :foreground ,color/main :underline nil))))
- `(ivy-minibuffer-match-face-1 ((t (:foreground ,color/secondary))))
- `(ivy-minibuffer-match-face-2 ((t (:foreground ,color/emphasis))))
- `(ivy-minibuffer-match-face-3 ((t (:foreground ,color/main))))
- `(ivy-minibuffer-match-face-4 ((t (:foreground ,color/string-like))))
- `(ivy-subdir ((t (:foreground ,color/main))))
+   ((t (:background ,v/emphasis/weak :foreground ,v/main :underline nil))))
+ `(ivy-minibuffer-match-face-1 ((t (:foreground ,v/secondary))))
+ `(ivy-minibuffer-match-face-2 ((t (:foreground ,v/emphasis))))
+ `(ivy-minibuffer-match-face-3 ((t (:foreground ,v/main))))
+ `(ivy-minibuffer-match-face-4 ((t (:foreground ,v/string-like))))
+ `(ivy-subdir ((t (:foreground ,v/main))))
  ;; '(ivy-confirm-face ((t (:foreground "green"))))
  ;; '(ivy-match-required-face ((t (:foreground "red"))))
  ;; '(ivy-org ((t (:foreground "red"))))
@@ -136,26 +139,30 @@
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
  `(company-tooltip
-   ((t (:foreground ,color/popup-inactive :background "#0f0f0f"))))
- '(company-scrollbar-bg
-   ((t (:background "#404040"))))
- '(company-scrollbar-fg
-   ((t (:background "#808080"))))
+   ((t (:foreground ,v/foreground/inv :background ,v/background/inv))))
+ `(company-scrollbar-bg
+   ((t (:background ,v/background/inv))))
+ `(company-scrollbar-fg
+   ((t (:background ,v/foreground/inv))))
  `(company-tooltip-selection
-   ((t (:foreground ,color/secondary :background ,color/popup-inactive))))
+   ((t (:foreground ,v/secondary :background ,v/focus))))
  `(company-tooltip-common
-   ((t (:foreground ,color/emphasis))))
- '(company-preview
-   ((t (:background "#333333" :foreground "#c0c0c0"))))
- '(company-preview-common
-   ((t (:foreground "#b0b0b0")))))
+   ((t (:foreground ,v/emphasis))))
+ `(company-preview
+   ((t (:background ,v/background/inv :foreground ,v/foreground/inv))))
+ `(company-preview-common
+   ((t (:foreground ,v/foreground/inv)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; swiper/ivy
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
- '(swiper-match-face-2
-   ((t (:background "#fc9cbf" :foreground "#111111" :weight bold)))))
+ `(swiper-match-face-2
+   ((t (:background
+	,v/emphasis/weak
+	:foreground
+	,v/foreground
+	:weight bold)))))
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
