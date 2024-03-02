@@ -19,7 +19,7 @@
 (global-set-key "\C-r"     'swiper-isearch-backward)
 
 ;; ;; Minimum key bindings
-(global-set-key "\C-@" 'counsel-M-x)
+(global-set-key "\C-@" 'other-window)
 (global-set-key "\C-q" 'undo)
 (global-set-key "\M-q" 'undo-redo)
 (global-set-key "\C-h" 'delete-backward-char)
