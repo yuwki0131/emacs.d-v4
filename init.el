@@ -3,10 +3,13 @@
 ;;;  Emacs init.el root
 ;;; Code:
 
+;; when starting up
+
 ;; WIP: 設定ファイルのルート
 (add-to-list 'load-path "~/.emacs.d/alter")
 
 (require 'primary)
+(require 'secondary)
 (require 'builtin)
 (require 'font)
 (require 'xolor)

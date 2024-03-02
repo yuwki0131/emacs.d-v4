@@ -107,6 +107,14 @@
  `(minibuffer-prompt ((t (:foreground ,color/main :weight bold)))))
 
 ;;; ---------------------------------------------------------------------------
+;;; git-gutter
+;;; ---------------------------------------------------------------------------
+(custom-set-faces
+ `(git-gutter:added    ((t (:foreground ,color/main          :background ,color/main))))
+ `(git-gutter:deleted  ((t (:foreground ,color/secondary     :background ,color/secondary))))
+ `(git-gutter:modified ((t (:foreground ,color/emphasis/weak :background ,color/emphasis/weak)))))
+
+;;; ---------------------------------------------------------------------------
 ;;; counsel/ivy
 ;;; ---------------------------------------------------------------------------
 (custom-set-faces
