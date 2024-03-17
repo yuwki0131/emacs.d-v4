@@ -109,7 +109,7 @@
       misc-info buffer-encoding
       ;; major-mode  <- rubyの場合だけ失敗する???
       process
-      vcs checker
+      vcs
       buffer-info
       )
     '())
