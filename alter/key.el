@@ -20,7 +20,6 @@
 
 ;; ;; Minimum key bindings
 (global-set-key "\C-@" 'other-window)
-(global-set-key "\C-o" 'other-window)
 (global-set-key "\C-q" 'undo)
 (global-set-key "\M-q" 'undo-redo)
 (global-set-key "\C-h" 'delete-backward-char)
