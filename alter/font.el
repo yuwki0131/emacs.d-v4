@@ -7,9 +7,9 @@
 
 (setq font-lock-support-mode 'jit-lock-mode)
 
-(defvar default-font-name "Fira Code")
+(defvar default-font-name "HackGen35 Console")
 
-(defvar default-font-jp-name "Takaoゴシック")
+(defvar default-font-jp-name "HackGen35 Console")
 
 ;; 半角フォント: abc...
 (set-face-attribute
