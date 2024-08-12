@@ -7,7 +7,6 @@
 (global-unset-key "\C-a")
 (global-unset-key "\C-z")
 (global-unset-key "\C-l")
-(global-unset-key "\C-o")
 (global-unset-key "\C-m")
 (global-unset-key "\M-m")
 (global-unset-key "\M-o")
