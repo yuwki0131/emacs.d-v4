@@ -18,6 +18,7 @@
 (global-set-key "\C-r"     'swiper-isearch-backward)
 
 ;; ;; Minimum key bindings
+(global-set-key "\M-o" 'other-window)
 (global-set-key "\C-@" 'other-window)
 (global-set-key "\C-q" 'undo)
 (global-set-key "\M-q" 'undo-redo)
@@ -35,7 +36,9 @@
 ;; ;;; moving key bindings
 (global-set-key "\C-e\C-c" 'shell)
 (global-set-key "\C-e\C-m" 'counsel-switch-buffer)
+(global-set-key "\M-n"     'next-buffer)
 (global-set-key "\C-e\C-f" 'next-buffer)
+(global-set-key "\M-p"     'previous-buffer)
 (global-set-key "\C-e\C-b" 'previous-buffer)
 (global-set-key "\C-e\C-a" 'move-beginning-of-line)
 (global-set-key "\C-e\C-e" 'move-end-of-line)
