@@ -1,2 +1,6 @@
 # emacs.d-v4
-my new emacs.d (version4) for Mac, Linux
+
+A personal Emacs configuration using `straight.el` and `use-package`.
+This setup targets macOS and Linux and focuses on a clean interface with useful
+packages enabled by default.
+

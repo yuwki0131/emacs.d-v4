@@ -71,6 +71,10 @@
 ;; 再帰的ミニバッファの深さを表示
 (minibuffer-depth-indicate-mode t)
 
+;; 履歴や外部変更の自動反映
+(savehist-mode t)
+(global-auto-revert-mode t)
+
 ;; from yes-or-no to y-or-n
 (fset 'yes-or-no-p 'y-or-n-p)
 
