@@ -5,8 +5,11 @@
 
 ;; when starting up
 
-;; WIP: 設定ファイルのルート
-(add-to-list 'load-path "~/.emacs.d/alter")
+;; Load configuration from the "alter" directory relative to this file
+(add-to-list 'load-path
+             (expand-file-name "alter"
+                               (file-name-directory
+                                (or load-file-name default-directory))))
 
 (require 'primary)
 (require 'secondary)
