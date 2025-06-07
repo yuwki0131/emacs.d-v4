@@ -13,10 +13,12 @@
 (global-hl-line-mode t)
 
 ;; 余計なマージンを削除
-(set-fringe-mode 0)
+(when (fboundp 'set-fringe-mode)
+  (set-fringe-mode 0))
 
 ;; emacs 26.x以降用行番号表示
-(global-display-line-numbers-mode)
+(when (fboundp 'global-display-line-numbers-mode)
+  (global-display-line-numbers-mode))
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
