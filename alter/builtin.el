@@ -4,13 +4,16 @@
 ;;; Code:
 
 ;; ツールバー表示設定
-(tool-bar-mode -1)
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
 
 ;; メニューバー表示設定 (Linux Mint/Cinnamonだと綺麗な表示)
-(menu-bar-mode -1)
+(when (fboundp 'menu-bar-mode)
+  (menu-bar-mode -1))
 
 ;; スクロールバー表示設定
-(scroll-bar-mode -1)
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
 
 ;; 画像ファイル表示
 (auto-image-file-mode t)
