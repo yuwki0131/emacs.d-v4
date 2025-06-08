@@ -4,7 +4,7 @@
 ;;; Code:
 
 ;; trim trailing whitespaces while saveing
-(add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
+(add-hook 'write-file-functions 'delete-trailing-whitespace nil t)
 
 ;; シェルモードで補完
 (add-hook 'shell-mode-hook 'company-mode)

@@ -11,25 +11,19 @@
 
 (defvar default-font-jp-name "HackGen35 Console")
 
-;; 半角フォント: abc...
-(when (fboundp 'set-face-attribute)
+(when (and (display-graphic-p) (fboundp 'set-face-attribute))
+  ;; 半角フォント: abc...
   (set-face-attribute
-   'default nil :family default-font-name :height 110))
-
-;; 日本語全角フォント: あいうえお...
-(when (fboundp 'set-fontset-font)
+   'default nil :family default-font-name :height 110)
+  ;; 日本語全角フォント: あいうえお...
   (set-fontset-font
    'nil 'japanese-jisx0208
-   (font-spec :family default-font-jp-name :height 105)))
-
-;; ギリシャ文字全角フォント: αβγκλ...
-(when (fboundp 'set-fontset-font)
+   (font-spec :family default-font-jp-name :height 105))
+  ;; ギリシャ文字全角フォント: αβγκλ...
   (set-fontset-font
    'nil '(#x0370 . #x03FF)
-   (font-spec :family default-font-name :height 120)))
-
-;; キリル文字全角フォント: Эта статья ... Русский
-(when (fboundp 'set-fontset-font)
+   (font-spec :family default-font-name :height 120))
+  ;; キリル文字全角フォント: Эта статья ... Русский
   (set-fontset-font
    'nil '(#x0400 . #x04FF)
    (font-spec :family default-font-name :height 120)))

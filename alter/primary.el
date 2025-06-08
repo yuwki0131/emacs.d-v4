@@ -82,7 +82,7 @@
    ;; 補完候補の最大表示数
    company-tooltip-limit 20
    ;; 候補に番号を付与
-   company-show-numbers t
+   company-show-quick-access t
    ))
 
 ;;; ---------------------------------------------------------------------------
