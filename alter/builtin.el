@@ -60,7 +60,7 @@
 
  ;; Make Tab complete if the line is indented
  tab-always-indent 'complete
- 
+
  ;; tab挿入モードを無効化(タブの代わりにスペースを使用)
  indent-tabs-mode nil
 
@@ -109,8 +109,14 @@
 (setq ruby-insert-encoding-magic-comment nil)
 
 ;;; ---------------------------------------------------------------------------
+;;; CI対応
+;;; ---------------------------------------------------------------------------
+(if noninteractive
+    t ;; 自動でYesにする
+  (y-or-n-p "Proceed?"))
+
+;;; ---------------------------------------------------------------------------
 ;;; provide
 ;;; ---------------------------------------------------------------------------
 (provide 'builtin)
 ;;; builtin.el ends here
-
