@@ -22,10 +22,20 @@
   (electric-pair-mode +1))
 
 ;;; ---------------------------------------------------------------------------
+;;; rainbow delimiters for programming modes
+;;; ---------------------------------------------------------------------------
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;;; ---------------------------------------------------------------------------
 ;;; ---------------------------------------------------------------------------
 (use-package dashboard
   :config
-  (setq dashboard-center-content t)
+  (setq dashboard-center-content t
+        dashboard-startup-banner 'official
+        dashboard-items '((recents  . 5)
+                          (projects . 5)
+                          (bookmarks . 5)))
   (dashboard-setup-startup-hook))
 
 ;;;---------------------------------------------------------------------------
