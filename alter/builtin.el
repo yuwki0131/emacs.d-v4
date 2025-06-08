@@ -57,12 +57,15 @@
 
  ;; Make Tab complete if the line is indented
  tab-always-indent 'complete
- 
+
  ;; tab挿入モードを無効化(タブの代わりにスペースを使用)
  indent-tabs-mode nil
 
  ;; killringについて
  kill-ring-max 30
+
+ ;; command history
+ history-length 10
 
  ;; killringでkillされる前にclipboardにコピーする
  save-interprogram-paste-before-kill t
@@ -110,4 +113,3 @@
 ;;; ---------------------------------------------------------------------------
 (provide 'builtin)
 ;;; builtin.el ends here
-
