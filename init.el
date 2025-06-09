@@ -7,9 +7,9 @@
 
 ;; Load configuration from the "alter" directory relative to this file
 (add-to-list 'load-path
-             (expand-file-name "alter"
-                               (file-name-directory
-                                (or load-file-name default-directory))))
+             (expand-file-name
+              "alter"
+              (file-name-directory (or load-file-name default-directory))))
 
 (require 'primary)
 (require 'secondary)
@@ -20,6 +20,7 @@
 (require 'hooks)
 (require 'lang)
 (require 'key)
+(require 'extention)
 
 '(setq default-directory "~/")
 
@@ -46,4 +47,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
