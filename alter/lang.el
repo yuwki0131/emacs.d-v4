@@ -6,9 +6,32 @@
 (use-package yaml-mode
   :config
   (add-hook 'yaml-mode-hook
-	    (lambda ()
+            (lambda ()
               (setq indent-tabs-mode nil)
               (setq yaml-indent-offset 2))))
+
+;;; ---------------------------------------------------------------------------
+;;; nix language support
+;;; ---------------------------------------------------------------------------
+(use-package nix-mode
+  :mode "\\.nix\\'"
+  :hook (nix-mode . lsp-deferred))
+
+(use-package nixpkgs-fmt
+  :after nix-mode
+  :hook (nix-mode . nixpkgs-fmt-on-save-mode))
+
+;;; ---------------------------------------------------------------------------
+;;; lsp-mode
+;;; ---------------------------------------------------------------------------
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :custom
+  (lsp-keymap-prefix "C-c l")
+  :hook ((nix-mode . lsp-deferred)))
+
+(use-package lsp-ui
+  :commands lsp-ui-mode)
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
