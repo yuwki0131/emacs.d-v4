@@ -9,4 +9,6 @@ Additional features include:
 - Smooth scrolling via `good-scroll`
 - Quick navigation with `avy`
 - Enhanced Org bullets using `org-bullets`
+- Modern themes with `doom-themes`
+- Rich icon support via `all-the-icons`
 
