@@ -32,6 +32,7 @@
 (global-set-key "\C-z\C-d" 'vc-root-diff)
 (global-set-key "\C-z\C-s" 'counsel-git-grep)
 (global-set-key "\C-z\C-a" 'counsel-ag)
+(global-set-key "\C-z\C-t" 'neotree-toggle)
 
 ;; ;;; moving key bindings
 (global-set-key "\C-e\C-c" 'shell)
