@@ -85,6 +85,21 @@
 (use-package helpful)
 (use-package vterm)
 
+;;; ---------------------------------------------------------------------------
+;;; Enhanced dired
+;;; ---------------------------------------------------------------------------
+(use-package diredfl
+  :hook (dired-mode . diredfl-mode))
+
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode))
+
+(use-package dired-open
+  :after dired
+  :custom
+  (dired-open-extensions '(("png" . "xdg-open")
+                           ("jpg" . "xdg-open"))))
+
 ;;;---------------------------------------------------------------------------
 ;;; provide
 ;;;---------------------------------------------------------------------------
