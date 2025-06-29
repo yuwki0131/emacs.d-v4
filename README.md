@@ -25,4 +25,7 @@ Additional features include:
 - Dired icons via `all-the-icons-dired`
 - Open files externally through `dired-open`
 - TOML and JSON editing modes
+- Indentation guides via `highlight-indent-guides`
+- Snippet expansion powered by `yasnippet`
+- Project tree navigation with `neotree`
 

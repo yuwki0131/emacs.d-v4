@@ -32,6 +32,14 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 ;;; ---------------------------------------------------------------------------
+;;; indentation guides
+;;; ---------------------------------------------------------------------------
+(use-package highlight-indent-guides
+  :hook (prog-mode . highlight-indent-guides-mode)
+  :config
+  (setq highlight-indent-guides-method 'column))
+
+;;; ---------------------------------------------------------------------------
 ;;; icon fonts
 ;;; ---------------------------------------------------------------------------
 (use-package all-the-icons)
@@ -86,6 +94,20 @@
 (use-package vterm)
 
 ;;; ---------------------------------------------------------------------------
+;;; snippet expansion
+;;; ---------------------------------------------------------------------------
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
+
+;;; ---------------------------------------------------------------------------
+;;; project tree viewer
+;;; ---------------------------------------------------------------------------
+(use-package neotree
+  :config
+  (setq neo-theme 'icons))
+
+;;; ---------------------------------------------------------------------------
 ;;; Enhanced dired
 ;;; ---------------------------------------------------------------------------
 (use-package diredfl
@@ -97,8 +119,12 @@
 (use-package dired-open
   :after dired
   :custom
-  (dired-open-extensions '(("png" . "xdg-open")
-                           ("jpg" . "xdg-open"))))
+  (dired-open-extensions
+   (if (eq system-type 'darwin)
+       '(("png" . "open")
+         ("jpg" . "open"))
+     '(("png" . "xdg-open")
+       ("jpg" . "xdg-open")))))
 
 ;;;---------------------------------------------------------------------------
 ;;; provide
