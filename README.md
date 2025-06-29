@@ -21,4 +21,8 @@ Additional features include:
 - Better help buffers via `helpful`
 - Integrated terminal using `vterm`
 - Markdown editing with `markdown-mode`
+- Colorful directory browsing with `diredfl`
+- Dired icons via `all-the-icons-dired`
+- Open files externally through `dired-open`
+- TOML and JSON editing modes
 

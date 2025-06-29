@@ -43,6 +43,7 @@
 (global-set-key "\C-e\C-a" 'move-beginning-of-line)
 (global-set-key "\C-e\C-e" 'move-end-of-line)
 (global-set-key "\C-e\C-l" 'browse-url)
+(global-set-key "\C-e\C-d" 'counsel-dired-jump)
 
 ;; ;; editorial key bindings
 (global-set-key "\C-a\C-a" 'comment-dwim)
