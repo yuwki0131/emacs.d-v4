@@ -29,6 +29,7 @@ Additional features include:
 - Snippet expansion powered by `yasnippet`
 - Project tree navigation with `neotree`
 - Multi-cursor editing via `multiple-cursors`
+- Automatic environment handling with `envrc`
 - Code folding powered by `origami`
 - Automatic indentation with `aggressive-indent`
 - Popup window management through `popwin`

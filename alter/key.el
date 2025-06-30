@@ -54,6 +54,11 @@
 (global-set-key "\C-a\C-y" 'counsel-yank-pop)
 (global-set-key "\C-a\C-q" 'quoted-insert)
 
+;; ;; multi-cursor key bindings
+(global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c m l") 'mc/edit-lines)
+
 ;; ;; change buffer
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
