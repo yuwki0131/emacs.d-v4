@@ -60,6 +60,16 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 
+;; ;; multi cursor operations
+(global-set-key "\C-a\C-n" 'mc/mark-next-like-this)
+(global-set-key "\C-a\C-p" 'mc/mark-previous-like-this)
+(global-set-key "\C-a\C-m" 'mc/mark-all-like-this)
+(global-set-key "\C-a\C-e" 'mc/edit-lines)
+
+;; ;; code folding and popup windows
+(global-set-key "\C-a\C-f" 'origami-toggle-node)
+(global-set-key "\C-e\C-w" 'popwin:popup-last-buffer)
+
 ;;; ---------------------------------------------------------------------------
 ;;; provide
 ;;; ---------------------------------------------------------------------------
