@@ -30,4 +30,7 @@ Additional features include:
 - Project tree navigation with `neotree`
 - Multi-cursor editing via `multiple-cursors`
 - Automatic environment handling with `envrc`
+- Code folding powered by `origami`
+- Automatic indentation with `aggressive-indent`
+- Popup window management through `popwin`
 
