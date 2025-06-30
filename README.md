@@ -28,4 +28,6 @@ Additional features include:
 - Indentation guides via `highlight-indent-guides`
 - Snippet expansion powered by `yasnippet`
 - Project tree navigation with `neotree`
+- Multi-cursor editing via `multiple-cursors`
+- Automatic environment handling with `envrc`
 

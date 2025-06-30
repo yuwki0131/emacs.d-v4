@@ -39,7 +39,7 @@
    '(duplicate-thing nix-ts-mode nixpkgs-fmt nix-mode evil magit wgrep use-package path-headerline-mode doom-modeline counsel company good-scroll avy org-bullets doom-themes all-the-icons
      comment-dwim-2 ibuffer-vc smartparens beacon super-save ace-window expand-region helpful vterm markdown-mode
     diredfl all-the-icons-dired dired-open toml-mode json-mode
-    highlight-indent-guides yasnippet neotree)))
+    highlight-indent-guides yasnippet neotree multiple-cursors envrc)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
