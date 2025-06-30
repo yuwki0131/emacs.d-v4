@@ -28,4 +28,8 @@ Additional features include:
 - Indentation guides via `highlight-indent-guides`
 - Snippet expansion powered by `yasnippet`
 - Project tree navigation with `neotree`
+- Multi-cursor editing via `multiple-cursors`
+- Code folding powered by `origami`
+- Automatic indentation with `aggressive-indent`
+- Popup window management through `popwin`
 
