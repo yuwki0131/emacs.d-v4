@@ -115,9 +115,12 @@
 ;;; ---------------------------------------------------------------------------
 ;;; project tree viewer
 ;;; ---------------------------------------------------------------------------
-(use-package neotree
+(use-package treemacs
   :config
-  (setq neo-theme 'icons))
+  (setq treemacs-is-never-other-window t))
+
+(use-package lsp-treemacs
+  :after (lsp-mode treemacs))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Enhanced dired
