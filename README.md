@@ -27,7 +27,8 @@ Additional features include:
 - TOML and JSON editing modes
 - Indentation guides via `highlight-indent-guides`
 - Snippet expansion powered by `yasnippet`
-- Project tree navigation with `neotree`
+- LSP integration via `lsp-mode` and `lsp-treemacs`
+- Project tree navigation with `treemacs`
 - Multi-cursor editing via `multiple-cursors`
 - Automatic environment handling with `envrc`
 - Code folding powered by `origami`
