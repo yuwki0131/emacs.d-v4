@@ -136,6 +136,7 @@
 ;;; outline viewer
 ;;; ---------------------------------------------------------------------------
 (use-package imenu-list
+  :ensure t
   :commands imenu-list-smart-toggle
   :config
   (setq imenu-list-auto-resize t))
