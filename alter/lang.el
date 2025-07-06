@@ -52,6 +52,7 @@
   :commands lsp-ivy-workspace-symbol)
 
 (use-package dap-mode
+  :ensure t
   :after lsp-mode
   :commands dap-debug
   :config
