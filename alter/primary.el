@@ -89,6 +89,7 @@
 ;;; company-box: completion popups with icons
 ;;; ---------------------------------------------------------------------------
 (use-package company-box
+  :ensure t
   :after company
   :hook (company-mode . company-box-mode))
 
