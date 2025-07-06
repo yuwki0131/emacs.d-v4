@@ -47,6 +47,7 @@
 ;;; lsp extensions
 ;;; ---------------------------------------------------------------------------
 (use-package lsp-ivy
+  :ensure t
   :after lsp-mode
   :commands lsp-ivy-workspace-symbol)
 
