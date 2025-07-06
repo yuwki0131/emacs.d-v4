@@ -34,4 +34,11 @@ Additional features include:
 - Code folding powered by `origami`
 - Automatic indentation with `aggressive-indent`
 - Popup window management through `popwin`
+- Symbol outline with `imenu-list`
+- Improved workspace search via `lsp-ivy`
+- Integrated debugging using `dap-mode`
+- Completion popups with icons via `company-box`
+- Inline documentation and code actions with `lsp-ui`
+- Workspace tabs using `eyebrowse`
+- Automatic project following in `treemacs`
 

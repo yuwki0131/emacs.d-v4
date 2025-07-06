@@ -86,6 +86,14 @@
    ))
 
 ;;; ---------------------------------------------------------------------------
+;;; company-box: completion popups with icons
+;;; ---------------------------------------------------------------------------
+(use-package company-box
+  :ensure t
+  :after company
+  :hook (company-mode . company-box-mode))
+
+;;; ---------------------------------------------------------------------------
 ;;; path header line mode : path header line mode
 ;;; ---------------------------------------------------------------------------
 (use-package path-headerline-mode
