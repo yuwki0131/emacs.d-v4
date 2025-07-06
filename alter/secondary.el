@@ -78,6 +78,7 @@
 ;;; workspace tabs
 ;;; ---------------------------------------------------------------------------
 (use-package eyebrowse
+  :ensure t
   :config
   (eyebrowse-mode 1))
 
