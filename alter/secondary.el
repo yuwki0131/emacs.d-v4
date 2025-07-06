@@ -75,6 +75,13 @@
   (good-scroll-mode +1))
 
 ;;; ---------------------------------------------------------------------------
+;;; workspace tabs
+;;; ---------------------------------------------------------------------------
+(use-package eyebrowse
+  :config
+  (eyebrowse-mode 1))
+
+;;; ---------------------------------------------------------------------------
 ;;; quick navigation
 ;;; ---------------------------------------------------------------------------
 (use-package avy
@@ -118,10 +125,19 @@
 (use-package treemacs
   :ensure t
   :config
-  (setq treemacs-is-never-other-window t))
+  (setq treemacs-is-never-other-window t)
+  (treemacs-project-follow-mode t))
 
 (use-package lsp-treemacs
   :after (lsp-mode treemacs))
+
+;;; ---------------------------------------------------------------------------
+;;; outline viewer
+;;; ---------------------------------------------------------------------------
+(use-package imenu-list
+  :commands imenu-list-smart-toggle
+  :config
+  (setq imenu-list-auto-resize t))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Enhanced dired

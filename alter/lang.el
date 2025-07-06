@@ -38,7 +38,25 @@
   :hook ((nix-mode . lsp-deferred)))
 
 (use-package lsp-ui
-  :commands lsp-ui-mode)
+  :commands lsp-ui-mode
+  :custom
+  (lsp-ui-sideline-show-code-actions t)
+  (lsp-ui-doc-enable t))
+
+;;; ---------------------------------------------------------------------------
+;;; lsp extensions
+;;; ---------------------------------------------------------------------------
+(use-package lsp-ivy
+  :after lsp-mode
+  :commands lsp-ivy-workspace-symbol)
+
+(use-package dap-mode
+  :after lsp-mode
+  :commands dap-debug
+  :config
+  (dap-auto-configure-mode)
+  (require 'dap-ui)
+  (dap-ui-mode 1))
 
 ;;; ---------------------------------------------------------------------------
 ;;; misc languages
